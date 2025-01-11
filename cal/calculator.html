@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css">
+    <script src="./calculator.js" ></script>
+</head>
+<body>
+    <form name="cForm">
+        <div id="container">
+            <div id="displayContainer">
+                <input type="text" readonly id="display" name="Answer" placeholder="0">
+            </div>
+            <div id="buttonContainer">
+                <div class="calcButtons">
+                    <input class="button" type="button" value="7" onclick="cForm.Answer.value+='7',fun1()">
+                    <input class="button" type="button" value="8" onclick="cForm.Answer.value+='8',fun1()">
+                    <input class="button" type="button" value="9" onclick="cForm.Answer.value+='9',fun1()">
+                    <input class="button oper" type="button" value="*" onclick="cForm.Answer.value+='*',fun1()">
+                </div>
+                <div class="calcButtons">
+                    <input class="button" type="button" value="4" onclick="cForm.Answer.value+='4',fun1()">
+                    <input class="button" type="button" value="5" onclick="cForm.Answer.value+='5',fun1()">
+                    <input class="button" type="button" value="6" onclick="cForm.Answer.value+='6',fun1()">
+                    <input class="button oper" type="button" value="-" onclick="cForm.Answer.value+='-',fun1()">
+                </div>
+                <div class="calcButtons">
+                    <input class="button" type="button" value="1" onclick="cForm.Answer.value+='1',fun1()">
+                    <input class="button" type="button" value="2" onclick="cForm.Answer.value+='2',fun1()">
+                    <input class="button" type="button" value="3" onclick="cForm.Answer.value+='3',fun1()">
+                    <input class="button oper" type="button"  value="+" onclick="cForm.Answer.value+='+',fun1()">
+                </div>
+                <div class="calcButtons">
+                    <input class="button oper" type="button" value="/" onclick="cForm.Answer.value+='/',fun1()">
+                    <input class="button" type="button" value="0" onclick="cForm.Answer.value+='0',fun1()">
+                    <input class="button oper" type="button" value="." onclick="cForm.Answer.value+='.',fun1()">
+                    <input class="button oper" type="button"  value="%" onclick="cForm.Answer.value+='%',fun1()">
+                </div>
+                <div class="calcButtons">
+                    <input class="splButton" type="button" value="Clear" onclick="cForm.Answer.value='',fun1()">
+                    <input class="splButton" type="button" value="BackSpace" onclick="cForm.Answer.value = cForm.Answer.value.slice(0,-1),fun1()">
+                    <input class="splButton equal oper" type="button"  value="=" onclick="cForm.Answer.value=eval(cForm.Answer.value),fun1()">
+                </div>
+
+            </div>
+        </div>
+    </form>
+</body>
+</html>
